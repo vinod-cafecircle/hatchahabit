@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hatch a Habit — Small habits. Big wings.</title>
+  <meta name="description" content="Fun 14-day habit journey books for children aged 4–12. Building habits for our little ones with creative means."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
+  <style>
+    /* ── Reset & base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 400;
+      color: #1A1A2E;
+      background: #FFFFFF;
+      overflow-x: hidden;
+    }
+
+    /* ── Brand tokens ── */
+    :root {
+      --navy:    #1A237E;
+      --cobalt:  #1565C0;
+      --sky:     #42A5F5;
+      --green:   #4CAF82;
+      --yellow:  #FDD835;
+      --orange:  #F57C00;
+      --pink:    #F06292;
+      --chest:   #90CAF9;
+      --leaf:    #66BB6A;
+      --dgreen:  #3A9E70;
+      --cream:   #FFF9E6;
+      --eggshell:#F7F5F0;
+      --sand:    #E2DDD5;
+      --ink:     #1A1A2E;
+      --white:   #FFFFFF;
+      --r: 20px;
+      --rl: 32px;
+    }
+
+    /* ── Utility ── */
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+    .btn {
+      display: inline-block;
+      background: var(--green);
+      color: white;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 1.05rem;
+      padding: 16px 36px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+      letter-spacing: .02em;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(76,175,130,.35); background: var(--dgreen); }
+    .btn-outline {
+      background: transparent;
+      border: 2.5px solid var(--green);
+      color: var(--green);
+    }
+    .btn-outline:hover { background: var(--green); color: white; }
+    .section-label {
+      display: inline-block;
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--dgreen);
+      background: #E8F5E9;
+      padding: 6px 16px;
+      border-radius: 50px;
+      margin-bottom: 18px;
+    }
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+      color: var(--navy);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .section-sub {
+      font-size: 1.1rem;
+      color: #607D8B;
+      line-height: 1.7;
+      max-width: 580px;
+    }
+
+    /* ── Sparkle SVG inline ── */
+    .sparkle { display: inline-block; }
+
+    /* ════════════════════════════════
+       NAV
+    ════════════════════════════════ */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1.5px solid var(--sand);
+      padding: 0 24px;
+    }
+    .nav-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+    .nav-wordmark {
+      font-size: 1.5rem;
+      font-weight: 900;
+      text-decoration: none;
+      line-height: 1;
+    }
+    .nav-wordmark span.h { color: var(--navy); }
+    .nav-wordmark span.a { color: var(--cobalt); }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-links a {
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--ink);
+      text-decoration: none;
+      opacity: .75;
+      transition: opacity .15s;
+    }
+    .nav-links a:hover { opacity: 1; }
+    .nav-pill {
+      background: var(--yellow);
+      color: var(--navy);
+      font-weight: 800;
+      font-size: .8rem;
+      letter-spacing: .06em;
+      padding: 6px 16px;
+      border-radius: 50px;
+    }
+    .nav-cta { display: flex; align-items: center; gap: 16px; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 2.5px; background: var(--navy); border-radius: 2px; transition: .2s; }
+
+    /* ════════════════════════════════
+       HERO
+    ════════════════════════════════ */
+    #hero {
+      background: var(--cream);
+      padding: 80px 24px 0;
+      overflow: hidden;
+      position: relative;
+    }
+    .hero-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 48px;
+      align-items: center;
+    }
+    .hero-content { padding-bottom: 80px; }
+    .hero-tagline-pre {
+      font-size: .8rem;
+      font-weight: 800;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: #90A4AE;
+      margin-bottom: 20px;
+    }
+    .hero-title {
+      font-size: clamp(3.2rem, 6vw, 5.2rem);
+      font-weight: 900;
+      line-height: 1.05;
+      margin-bottom: 12px;
+    }
+    .hero-title .line1 { color: var(--navy); display: block; }
+    .hero-title .line2 { color: var(--cobalt); display: block; }
+    .hero-tagline {
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: #90A4AE;
+      margin-bottom: 28px;
+    }
+    .hero-desc {
+      font-size: 1.15rem;
+      color: #546E7A;
+      line-height: 1.75;
+      max-width: 500px;
+      margin-bottom: 40px;
+    }
+    .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+    .hero-trust {
+      margin-top: 48px;
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .9rem;
+      font-weight: 700;
+      color: #78909C;
+    }
+    .trust-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    /* Ollie hero illustration */
+    .hero-bird {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 0;
+    }
+    .hero-bird svg { width: 100%; max-width: 420px; }
+
+    /* Background decoration */
+    .hero-blob {
+      position: absolute;
+      top: -60px; right: -80px;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #FDD83540 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* ════════════════════════════════
+       MEET OLLIE
+    ════════════════════════════════ */
+    #ollie {
+      background: var(--white);
+      padding: 100px 24px;
+    }
+    .ollie-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .ollie-card {
+      background: var(--navy);
+      border-radius: var(--rl);
+      padding: 56px 48px;
+      position: relative;
+      overflow: hidden;
+    }
+    .ollie-card::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 220px; height: 220px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.04);
+    }
+    .ollie-card::after {
+      content: '';
+      position: absolute;
+      bottom: -40px; left: -40px;
+      width: 160px; height: 160px;
+      border-radius: 50%;
+      background: rgba(76,175,130,.12);
+    }
+    .ollie-bird-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 32px;
+    }
+    .ollie-bird-wrap svg { width: 200px; }
+    .ollie-name {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--yellow);
+      margin-bottom: 8px;
+    }
+    .ollie-role {
+      font-size: .8rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--sky);
+      margin-bottom: 20px;
+    }
+    .ollie-bio {
+      font-size: 1rem;
+      color: rgba(255,255,255,.8);
+      line-height: 1.75;
+    }
+    .ollie-traits {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+    .trait-pill {
+      background: rgba(255,255,255,.1);
+      color: var(--chest);
+      font-size: .8rem;
+      font-weight: 700;
+      padding: 6px 16px;
+      border-radius: 50px;
+      border: 1.5px solid rgba(144,202,249,.25);
+    }
+    .ollie-text { }
+    .ollie-text .section-sub { max-width: 100%; }
+    .ollie-features {
+      margin-top: 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .ollie-feature {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .feature-icon {
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+    .feature-text h4 { font-size: 1rem; font-weight: 800; color: var(--navy); margin-bottom: 4px; }
+    .feature-text p { font-size: .9rem; color: #607D8B; line-height: 1.6; }
+
+    /* ════════════════════════════════
+       BOOKS
+    ════════════════════════════════ */
+    #books {
+      background: var(--eggshell);
+      padding: 100px 24px;
+    }
+    .books-head { text-align: center; margin-bottom: 60px; }
+    .books-head .section-sub { margin: 0 auto; text-align: center; }
+    .books-grid {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .book-card {
+      border-radius: var(--rl);
+      overflow: hidden;
+      transition: transform .2s ease, box-shadow .2s ease;
+      cursor: default;
+    }
+    .book-card:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(0,0,0,.12); }
+    .book-card-top {
+      padding: 36px 32px 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+      overflow: hidden;
+      min-height: 240px;
+    }
+    .book-number {
+      font-size: .7rem;
+      font-weight: 800;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      opacity: .55;
+      margin-bottom: 12px;
+    }
+    .book-bird-emoji { font-size: 3.2rem; margin-bottom: 12px; line-height: 1; min-height: 56px; display: flex; align-items: center; }
+    .book-bird-emoji svg { display: block; }
+    .book-char-name { font-size: 1.5rem; font-weight: 900; line-height: 1; margin-bottom: 4px; }
+    .book-habit-label {
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      opacity: .65;
+    }
+    .book-card-dot {
+      position: absolute;
+      top: -30px; right: -30px;
+      width: 120px; height: 120px;
+      border-radius: 50%;
+      opacity: .18;
+    }
+    .book-card-bottom {
+      background: white;
+      padding: 24px 32px 28px;
+    }
+    .book-title { font-size: 1.15rem; font-weight: 900; color: var(--navy); margin-bottom: 8px; }
+    .book-desc { font-size: .9rem; color: #607D8B; line-height: 1.6; margin-bottom: 16px; }
+    .book-personality {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: .8rem;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 50px;
+    }
+
+    /* ════════════════════════════════
+       HOW IT WORKS
+    ════════════════════════════════ */
+    #how {
+      background: var(--white);
+      padding: 100px 24px;
+    }
+    .how-inner { max-width: 1160px; margin: 0 auto; }
+    .how-head { text-align: center; margin-bottom: 64px; }
+    .how-head .section-sub { margin: 0 auto; text-align: center; }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      position: relative;
+    }
+    .steps-grid::before {
+      content: '';
+      position: absolute;
+      top: 44px;
+      left: calc(12.5% + 16px);
+      right: calc(12.5% + 16px);
+      height: 2px;
+      background: linear-gradient(90deg, var(--green), var(--sky), var(--yellow), var(--pink));
+      border-radius: 2px;
+    }
+    .step-card {
+      text-align: center;
+      padding: 0 12px;
+      position: relative;
+    }
+    .step-bubble {
+      width: 88px; height: 88px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem;
+      margin: 0 auto 24px;
+      position: relative;
+      z-index: 1;
+      border: 4px solid white;
+      box-shadow: 0 4px 16px rgba(0,0,0,.1);
+    }
+    .step-title { font-size: 1.1rem; font-weight: 900; color: var(--navy); margin-bottom: 10px; }
+    .step-desc { font-size: .9rem; color: #607D8B; line-height: 1.65; }
+
+    /* ════════════════════════════════
+       EMAIL CAPTURE
+    ════════════════════════════════ */
+    #signup {
+      background: var(--navy);
+      padding: 100px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    #signup::before {
+      content: '';
+      position: absolute;
+      top: -100px; right: -100px;
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background: rgba(21,101,192,.3);
+    }
+    #signup::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: -80px;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      background: rgba(76,175,130,.15);
+    }
+    .signup-inner {
+      max-width: 640px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .signup-inner .section-label {
+      background: rgba(255,255,255,.1);
+      color: var(--chest);
+    }
+    .signup-title {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 900;
+      color: white;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .signup-sub {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,.65);
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+    .signup-form {
+      display: flex;
+      gap: 12px;
+      max-width: 500px;
+      margin: 0 auto 20px;
+      flex-wrap: wrap;
+    }
+    .signup-form input {
+      flex: 1;
+      min-width: 220px;
+      padding: 16px 22px;
+      border-radius: 50px;
+      border: 2px solid rgba(255,255,255,.15);
+      background: rgba(255,255,255,.08);
+      color: white;
+      font-family: 'Nunito', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      outline: none;
+      transition: border .2s;
+    }
+    .signup-form input::placeholder { color: rgba(255,255,255,.4); }
+    .signup-form input:focus { border-color: var(--green); }
+    .signup-form .btn { white-space: nowrap; }
+    .signup-fine {
+      font-size: .8rem;
+      color: rgba(255,255,255,.35);
+      letter-spacing: .02em;
+    }
+
+    /* ════════════════════════════════
+       FOOTER
+    ════════════════════════════════ */
+    footer {
+      background: var(--ink);
+      padding: 48px 24px;
+    }
+    .footer-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    .footer-brand { }
+    .footer-wordmark {
+      font-size: 1.3rem;
+      font-weight: 900;
+      text-decoration: none;
+      line-height: 1;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .footer-wordmark span.h { color: white; }
+    .footer-wordmark span.a { color: var(--green); }
+    .footer-tagline-sm {
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.3);
+    }
+    .footer-copy {
+      font-size: .82rem;
+      color: rgba(255,255,255,.3);
+      line-height: 1.7;
+      text-align: right;
+    }
+    .footer-palette {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .fp { width: 18px; height: 18px; border-radius: 50%; }
+
+    /* ════════════════════════════════
+       RESPONSIVE
+    ════════════════════════════════ */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-bird { display: none; }
+      .hero-content { padding-bottom: 64px; }
+      .ollie-inner { grid-template-columns: 1fr; }
+      .books-grid { grid-template-columns: repeat(2, 1fr); }
+      .steps-grid { grid-template-columns: repeat(2, 1fr); }
+      .steps-grid::before { display: none; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .footer-copy { text-align: left; }
+    }
+    @media (max-width: 580px) {
+      .books-grid { grid-template-columns: 1fr; }
+      .steps-grid { grid-template-columns: 1fr; }
+      .footer-palette { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, .book-card, .btn { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ════ NAV ════ -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="nav-wordmark">
+        <span class="h">Hatch </span><span class="a">a Habit</span>
+      </a>
+      <div class="nav-links">
+        <a href="#ollie">Meet Ollie</a>
+        <a href="#books">The Books</a>
+        <a href="#how">How it Works</a>
+        <span class="nav-pill">✨ Coming Soon</span>
+        <a href="#signup" class="btn" style="padding:10px 24px;font-size:.9rem;">Get Early Access</a>
+      </div>
+      <div class="hamburger" onclick="this.classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ════ HERO ════ -->
+  <section id="hero">
+    <div class="hero-blob"></div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <p class="hero-tagline-pre">🇦🇺 Proudly Australian · For Kids Aged 4–12</p>
+        <h1 class="hero-title">
+          <span class="line1">Hatch</span>
+          <span class="line2">a Habit</span>
+        </h1>
+        <p class="hero-tagline">Small habits. Big wings.</p>
+        <p class="hero-desc">
+          Building habits for our little ones with creative means. 
+          Fun illustrated 14-day journeys, colouring pages, and daily 
+          activities — guided by loveable Australian bird characters.
+        </p>
+        <div class="hero-ctas">
+          <a href="#signup" class="btn">Get Early Access 🪺</a>
+          <a href="#books" class="btn btn-outline">See the Books</a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-item">
+            <div class="trust-dot" style="background:#4CAF82"></div>
+            6 Habit Journeys
+          </div>
+          <div class="trust-item">
+            <div class="trust-dot" style="background:#FDD835"></div>
+            Ages 4–12
+          </div>
+          <div class="trust-item">
+            <div class="trust-dot" style="background:#F06292"></div>
+            Digital &amp; Paperback
+          </div>
+          <div class="trust-item">
+            <div class="trust-dot" style="background:#42A5F5"></div>
+            Global Shipping
+          </div>
+        </div>
+      </div>
+      <div class="hero-bird">
+        <!-- Ollie SVG — full brand illustration -->
+        <svg viewBox="0 0 380 460" xmlns="http://www.w3.org/2000/svg">
+          <!-- Background soft circle -->
+          <circle cx="190" cy="260" r="170" fill="#FDD835" opacity="0.12"/>
+          <!-- Branch -->
+          <path d="M40 330 Q190 308 340 328" stroke="#8B6530" stroke-width="9" fill="none" stroke-linecap="round"/>
+          <path d="M90 316 Q98 306 106 316" stroke="#6b4e18" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path d="M170 308 Q178 298 186 308" stroke="#6b4e18" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path d="M260 312 Q268 302 276 312" stroke="#6b4e18" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <!-- Tail feathers -->
+          <path d="M162 218 Q138 248 128 296" stroke="#1a237e" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <path d="M170 216 Q150 248 146 298" stroke="#1a237e" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <path d="M178 214 Q164 246 162 298" stroke="#283593" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <!-- Body -->
+          <ellipse cx="208" cy="258" rx="72" ry="62" fill="#1565C0"/>
+          <!-- Chest -->
+          <ellipse cx="222" cy="274" rx="42" ry="36" fill="#90CAF9"/>
+          <!-- Left wing -->
+          <path d="M142 252 Q126 224 148 200 Q164 224 162 258 Z" fill="#0D47A1"/>
+          <!-- Right wing -->
+          <path d="M272 246 Q290 218 272 194 Q256 218 258 250 Z" fill="#0D47A1"/>
+          <!-- Head -->
+          <circle cx="208" cy="188" r="56" fill="#1a237e"/>
+          <!-- Crown feathers — exactly 4 -->
+          <path d="M186 136 Q180 108 184 92 Q192 110 189 136" fill="#1565C0" stroke="#1a237e" stroke-width="1"/>
+          <path d="M200 130 Q196 100 200 82 Q210 102 206 130" fill="#42A5F5" stroke="#1a237e" stroke-width="1"/>
+          <path d="M215 130 Q214 98 220 80 Q230 100 224 130" fill="#42A5F5" stroke="#1a237e" stroke-width="1"/>
+          <path d="M229 133 Q231 102 237 88 Q245 108 240 133" fill="#1565C0" stroke="#1a237e" stroke-width="1"/>
+          <!-- Eye -->
+          <circle cx="224" cy="182" r="20" fill="white"/>
+          <circle cx="227" cy="182" r="13" fill="#0D1B4B"/>
+          <circle cx="232" cy="176" r="5" fill="white"/>
+          <!-- Beak -->
+          <path d="M256 193 L278 187 L256 204 Z" fill="#F57C00"/>
+          <line x1="258" y1="193" x2="275" y2="188" stroke="#E65100" stroke-width="1.5"/>
+          <!-- Feet left -->
+          <line x1="192" y1="316" x2="184" y2="338" stroke="#F57C00" stroke-width="4" stroke-linecap="round"/>
+          <line x1="184" y1="338" x2="170" y2="346" stroke="#F57C00" stroke-width="3" stroke-linecap="round"/>
+          <line x1="184" y1="338" x2="180" y2="352" stroke="#F57C00" stroke-width="3" stroke-linecap="round"/>
+          <line x1="184" y1="338" x2="196" y2="348" stroke="#F57C00" stroke-width="3" stroke-linecap="round"/>
+          <!-- Feet right -->
+          <line x1="228" y1="318" x2="236" y2="340" stroke="#F57C00" stroke-width="4" stroke-linecap="round"/>
+          <line x1="236" y1="340" x2="222" y2="348" stroke="#F57C00" stroke-width="3" stroke-linecap="round"/>
+          <line x1="236" y1="340" x2="234" y2="354" stroke="#F57C00" stroke-width="3" stroke-linecap="round"/>
+          <line x1="236" y1="340" x2="248" y2="346" stroke="#F57C00" stroke-width="3" stroke-linecap="round"/>
+          <!-- Sparkles -->
+          <path d="M96 168 L99 156 L102 168 L114 171 L102 174 L99 186 L96 174 L84 171 Z" fill="#FDD835"/>
+          <path d="M322 148 L325 138 L328 148 L338 151 L328 154 L325 164 L322 154 L312 151 Z" fill="#FDD835"/>
+          <circle cx="78" cy="216" r="8" fill="#F06292"/>
+          <circle cx="336" cy="210" r="7" fill="#66BB6A"/>
+          <circle cx="104" cy="116" r="6" fill="#FDD835"/>
+          <circle cx="320" cy="270" r="5" fill="#F06292"/>
+          <path d="M72 280 L74 273 L76 280 L83 282 L76 284 L74 291 L72 284 L65 282 Z" fill="#4CAF82" opacity="0.7"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ MEET OLLIE ════ -->
+  <section id="ollie">
+    <div class="container">
+      <div class="ollie-inner">
+        <div class="ollie-card">
+          <div class="ollie-bird-wrap">
+            <svg viewBox="60 80 280 280" xmlns="http://www.w3.org/2000/svg">
+              <path d="M40 330 Q190 308 340 328" stroke="#8B6530" stroke-width="9" fill="none" stroke-linecap="round"/>
+              <path d="M90 316 Q98 306 106 316" stroke="#6b4e18" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <path d="M170 308 Q178 298 186 308" stroke="#6b4e18" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <path d="M260 312 Q268 302 276 312" stroke="#6b4e18" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <path d="M162 218 Q138 248 128 296" stroke="#1a237e" stroke-width="6" fill="none" stroke-linecap="round"/>
+              <path d="M170 216 Q150 248 146 298" stroke="#1a237e" stroke-width="5" fill="none" stroke-linecap="round"/>
+              <path d="M178 214 Q164 246 162 298" stroke="#283593" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <ellipse cx="208" cy="258" rx="72" ry="62" fill="#1565C0"/>
+              <ellipse cx="222" cy="274" rx="42" ry="36" fill="#90CAF9"/>
+              <path d="M142 252 Q126 224 148 200 Q164 224 162 258 Z" fill="#0D47A1"/>
+              <path d="M272 246 Q290 218 272 194 Q256 218 258 250 Z" fill="#0D47A1"/>
+              <circle cx="208" cy="188" r="56" fill="#1a237e"/>
+              <path d="M186 136 Q180 108 184 92 Q192 110 189 136" fill="#1565C0" stroke="#1a237e" stroke-width="1"/>
+              <path d="M200 130 Q196 100 200 82 Q210 102 206 130" fill="#42A5F5" stroke="#1a237e" stroke-width="1"/>
+              <path d="M215 130 Q214 98 220 80 Q230 100 224 130" fill="#42A5F5" stroke="#1a237e" stroke-width="1"/>
+              <path d="M229 133 Q231 102 237 88 Q245 108 240 133" fill="#1565C0" stroke="#1a237e" stroke-width="1"/>
+              <circle cx="224" cy="182" r="20" fill="white"/>
+              <circle cx="227" cy="182" r="13" fill="#0D1B4B"/>
+              <circle cx="232" cy="176" r="5" fill="white"/>
+              <path d="M256 193 L278 187 L256 204 Z" fill="#F57C00"/>
+              <line x1="258" y1="193" x2="275" y2="188" stroke="#E65100" stroke-width="1.5"/>
+              <line x1="192" y1="316" x2="184" y2="338" stroke="#F57C00" stroke-width="4" stroke-linecap="round"/>
+              <line x1="184" y1="338" x2="170" y2="346" stroke="#F57C00" stroke-width="3" stroke-linecap="round"/>
+              <line x1="184" y1="338" x2="180" y2="352" stroke="#F57C00" stroke-width="3" stroke-linecap="round"/>
+              <line x1="184" y1="338" x2="196" y2="348" stroke="#F57C00" stroke-width="3" stroke-linecap="round"/>
+              <line x1="228" y1="318" x2="236" y2="340" stroke="#F57C00" stroke-width="4" stroke-linecap="round"/>
+              <line x1="236" y1="340" x2="222" y2="348" stroke="#F57C00" stroke-width="3" stroke-linecap="round"/>
+              <line x1="236" y1="340" x2="234" y2="354" stroke="#F57C00" stroke-width="3" stroke-linecap="round"/>
+              <line x1="236" y1="340" x2="248" y2="346" stroke="#F57C00" stroke-width="3" stroke-linecap="round"/>
+              <path d="M96 168 L99 156 L102 168 L114 171 L102 174 L99 186 L96 174 L84 171 Z" fill="#FDD835"/>
+              <path d="M322 148 L325 138 L328 148 L338 151 L328 154 L325 164 L322 154 L312 151 Z" fill="#FDD835"/>
+              <circle cx="78" cy="216" r="8" fill="#F06292"/>
+              <circle cx="336" cy="210" r="7" fill="#66BB6A"/>
+            </svg>
+          </div>
+          <div class="ollie-name">Ollie 🩵</div>
+          <div class="ollie-role">Brand Mascot · Fairy Wren</div>
+          <p class="ollie-bio">Tiny but mighty, Ollie is the warm, caring heart of Hatch a Habit. This little Fairy Wren shows kids that even the smallest creature can make the biggest difference — one habit at a time.</p>
+          <div class="ollie-traits">
+            <span class="trait-pill">Tiny but mighty</span>
+            <span class="trait-pill">Warm &amp; caring</span>
+            <span class="trait-pill">Sparkle energy</span>
+            <span class="trait-pill">Always kind</span>
+          </div>
+        </div>
+        <div class="ollie-text">
+          <span class="section-label">Meet your guide</span>
+          <h2 class="section-title">Say g'day to Ollie the Fairy Wren</h2>
+          <p class="section-sub">Ollie is the face of Hatch a Habit — a tiny Australian Fairy Wren with a huge heart. Ollie guides kids and families through every habit journey, cheering every small win along the way.</p>
+          <div class="ollie-features">
+            <div class="ollie-feature">
+              <div class="feature-icon" style="background:#E8F5E9;">🪺</div>
+              <div class="feature-text">
+                <h4>Your habit companion</h4>
+                <p>Ollie appears on every Hatch a Habit book, card, and page — a friendly face that kids instantly recognise and love.</p>
+              </div>
+            </div>
+            <div class="ollie-feature">
+              <div class="feature-icon" style="background:#FFF3E0;">✨</div>
+              <div class="feature-text">
+                <h4>Sparkle energy, every day</h4>
+                <p>Ollie's infectious joy makes even tough habits feel achievable. The sparkles aren't just decoration — they're encouragement.</p>
+              </div>
+            </div>
+            <div class="ollie-feature">
+              <div class="feature-icon" style="background:#E3F2FD;">🇦🇺</div>
+              <div class="feature-text">
+                <h4>Proudly Australian</h4>
+                <p>The Superb Fairy Wren is one of Australia's most beloved native birds — vibrant, spirited, and full of personality.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ BOOKS ════ -->
+  <section id="books">
+    <div class="books-head container">
+      <span class="section-label">The Series</span>
+      <h2 class="section-title">Six habit journeys. One big adventure.</h2>
+      <p class="section-sub">Each book is a standalone 14-day journey with its own Australian bird guide, colouring pages, and daily micro-habit activities. Collect them all!</p>
+    </div>
+    <div class="books-grid container">
+
+      <!-- Book 1 — Kev Kookaburra -->
+      <div class="book-card">
+        <div class="book-card-top" style="background:linear-gradient(135deg,#F5A623,#E07B2A);">
+          <div class="book-card-dot" style="background:#FDECC8;"></div>
+          <div class="book-number" style="color:#FDECC8;">Book 01</div>
+          <!-- Kev the Kookaburra SVG — final approved -->
+          <div class="book-bird-emoji" style="font-size:0;line-height:0;">
+            <svg viewBox="168 20 345 380" width="80" height="80" xmlns="http://www.w3.org/2000/svg">
+              <path d="M168 368 Q340 352 512 366" stroke="#8B6530" stroke-width="9" fill="none" stroke-linecap="round"/>
+              <path d="M228 358 Q234 350 240 358" stroke="#5C3A10" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <path d="M316 351 Q322 343 328 351" stroke="#5C3A10" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <path d="M228 294 Q202 322 194 360" stroke="#8B5E3C" stroke-width="7" fill="none" stroke-linecap="round"/>
+              <path d="M238 298 Q216 324 210 362" stroke="#C4873A" stroke-width="5" fill="none" stroke-linecap="round"/>
+              <path d="M248 302 Q230 326 228 364" stroke="#8B5E3C" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+              <ellipse cx="318" cy="302" rx="72" ry="60" fill="#8B5E3C"/>
+              <ellipse cx="330" cy="316" rx="48" ry="38" fill="#FDECC8"/>
+              <path d="M256 290 Q240 266 256 244 Q272 266 268 294 Z" fill="#5C3A1E"/>
+              <circle cx="330" cy="214" r="80" fill="#FDECC8"/>
+              <path d="M258 198 Q272 130 330 118 Q388 130 402 198 Q376 166 330 164 Q284 166 258 198Z" fill="#5C3A1E"/>
+              <path d="M298 130 Q284 82 294 56 Q308 84 306 132Z" fill="#5C3A1E"/>
+              <path d="M318 124 Q312 64 322 36 Q334 66 330 126Z" fill="#8B5E3C"/>
+              <path d="M338 122 Q336 52 344 26 Q352 54 348 124Z" fill="#5C3A1E"/>
+              <circle cx="360" cy="206" r="20" fill="white"/>
+              <circle cx="362" cy="206" r="13" fill="#1A1A2E"/>
+              <circle cx="367" cy="200" r="5" fill="white"/>
+              <path d="M396 208 L456 202 L396 222 Z" fill="#E07B2A"/>
+              <line x1="300" y1="358" x2="293" y2="374" stroke="#E07B2A" stroke-width="4.5" stroke-linecap="round"/>
+              <line x1="293" y1="374" x2="281" y2="381" stroke="#E07B2A" stroke-width="3.5" stroke-linecap="round"/>
+              <line x1="293" y1="374" x2="289" y2="388" stroke="#E07B2A" stroke-width="3.5" stroke-linecap="round"/>
+              <line x1="293" y1="374" x2="302" y2="382" stroke="#E07B2A" stroke-width="3.5" stroke-linecap="round"/>
+              <line x1="336" y1="360" x2="343" y2="374" stroke="#E07B2A" stroke-width="4.5" stroke-linecap="round"/>
+              <line x1="343" y1="374" x2="333" y2="381" stroke="#E07B2A" stroke-width="3.5" stroke-linecap="round"/>
+              <line x1="343" y1="374" x2="341" y2="388" stroke="#E07B2A" stroke-width="3.5" stroke-linecap="round"/>
+              <line x1="343" y1="374" x2="352" y2="381" stroke="#E07B2A" stroke-width="3.5" stroke-linecap="round"/>
+              <path d="M184 234 L187 222 L190 234 L202 238 L190 242 L187 254 L184 242 L172 238 Z" fill="#FDD835"/>
+              <circle cx="178" cy="310" r="6" fill="#FDD835" opacity="0.8"/>
+              <circle cx="186" cy="170" r="5" fill="#F06292" opacity="0.8"/>
+            </svg>
+          </div>
+          <div class="book-char-name" style="color:#FDECC8;">Kev</div>
+          <div class="book-habit-label" style="color:#FDECC8;">Morning Habits</div>
+        </div>
+        <div class="book-card-bottom">
+          <div class="book-title">Morning Habits</div>
+          <p class="book-desc">Wake up with Kev the Kookaburra! Build a cheerful morning routine that sets the tone for a brilliant day.</p>
+          <span class="book-personality" style="background:#FFF3E0;color:#E07B2A;">😄 Loud &amp; Cheerful</span>
+        </div>
+      </div>
+
+      <!-- Book 2 — Ollie Fairy Wren -->
+      <div class="book-card">
+        <div class="book-card-top" style="background:linear-gradient(135deg,#1A237E,#1565C0);">
+          <div class="book-card-dot" style="background:#42A5F5;"></div>
+          <div class="book-number" style="color:#90CAF9;">Book 02</div>
+          <!-- Mini Ollie SVG — locked brand illustration -->
+          <div class="book-bird-emoji" style="font-size:0;line-height:0;">
+            <svg viewBox="80 80 240 260" width="72" height="72" xmlns="http://www.w3.org/2000/svg">
+              <!-- Branch -->
+              <path d="M40 330 Q190 308 340 328" stroke="#8B6530" stroke-width="9" fill="none" stroke-linecap="round"/>
+              <!-- Tail feathers -->
+              <path d="M162 218 Q138 248 128 296" stroke="#1a237e" stroke-width="6" fill="none" stroke-linecap="round"/>
+              <path d="M170 216 Q150 248 146 298" stroke="#1a237e" stroke-width="5" fill="none" stroke-linecap="round"/>
+              <path d="M178 214 Q164 246 162 298" stroke="#283593" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <!-- Body -->
+              <ellipse cx="208" cy="258" rx="72" ry="62" fill="#1565C0"/>
+              <!-- Chest -->
+              <ellipse cx="222" cy="274" rx="42" ry="36" fill="#90CAF9"/>
+              <!-- Left wing -->
+              <path d="M142 252 Q126 224 148 200 Q164 224 162 258 Z" fill="#0D47A1"/>
+              <!-- Right wing -->
+              <path d="M272 246 Q290 218 272 194 Q256 218 258 250 Z" fill="#0D47A1"/>
+              <!-- Head -->
+              <circle cx="208" cy="188" r="56" fill="#1a237e"/>
+              <!-- 4 crown feathers — locked -->
+              <path d="M186 136 Q180 108 184 92 Q192 110 189 136" fill="#1565C0" stroke="#1a237e" stroke-width="1"/>
+              <path d="M200 130 Q196 100 200 82 Q210 102 206 130" fill="#42A5F5" stroke="#1a237e" stroke-width="1"/>
+              <path d="M215 130 Q214 98 220 80 Q230 100 224 130" fill="#42A5F5" stroke="#1a237e" stroke-width="1"/>
+              <path d="M229 133 Q231 102 237 88 Q245 108 240 133" fill="#1565C0" stroke="#1a237e" stroke-width="1"/>
+              <!-- Eye -->
+              <circle cx="224" cy="182" r="20" fill="white"/>
+              <circle cx="227" cy="182" r="13" fill="#0D1B4B"/>
+              <circle cx="232" cy="176" r="5" fill="white"/>
+              <!-- Beak -->
+              <path d="M256 193 L278 187 L256 204 Z" fill="#F57C00"/>
+              <!-- Feet -->
+              <line x1="192" y1="316" x2="184" y2="338" stroke="#F57C00" stroke-width="4" stroke-linecap="round"/>
+              <line x1="184" y1="338" x2="170" y2="346" stroke="#F57C00" stroke-width="3" stroke-linecap="round"/>
+              <line x1="184" y1="338" x2="180" y2="352" stroke="#F57C00" stroke-width="3" stroke-linecap="round"/>
+              <line x1="184" y1="338" x2="196" y2="348" stroke="#F57C00" stroke-width="3" stroke-linecap="round"/>
+              <line x1="228" y1="318" x2="236" y2="340" stroke="#F57C00" stroke-width="4" stroke-linecap="round"/>
+              <line x1="236" y1="340" x2="222" y2="348" stroke="#F57C00" stroke-width="3" stroke-linecap="round"/>
+              <line x1="236" y1="340" x2="234" y2="354" stroke="#F57C00" stroke-width="3" stroke-linecap="round"/>
+              <line x1="236" y1="340" x2="248" y2="346" stroke="#F57C00" stroke-width="3" stroke-linecap="round"/>
+              <!-- Sparkles -->
+              <path d="M96 168 L99 156 L102 168 L114 171 L102 174 L99 186 L96 174 L84 171 Z" fill="#FDD835"/>
+              <circle cx="78" cy="216" r="8" fill="#F06292"/>
+              <circle cx="336" cy="210" r="7" fill="#66BB6A"/>
+            </svg>
+          </div>
+          <div class="book-char-name" style="color:#90CAF9;">Ollie</div>
+          <div class="book-habit-label" style="color:#90CAF9;">Kindness Habits</div>
+        </div>
+        <div class="book-card-bottom">
+          <div class="book-title">Kindness Habits</div>
+          <p class="book-desc">Join Ollie the Fairy Wren and discover that small acts of kindness create the biggest ripples in the world.</p>
+          <span class="book-personality" style="background:#E3F2FD;color:#1565C0;">💙 Tiny but Mighty</span>
+        </div>
+      </div>
+
+      <!-- Book 3 — Eddie Eagle -->
+      <div class="book-card">
+        <div class="book-card-top" style="background:linear-gradient(135deg,#2C3E6B,#1a2a50);">
+          <div class="book-card-dot" style="background:#C0392B;"></div>
+          <div class="book-number" style="color:#ECE8DF;">Book 03</div>
+          <div class="book-bird-emoji">🦅</div>
+          <div class="book-char-name" style="color:#D4A24C;">Eddie</div>
+          <div class="book-habit-label" style="color:#ECE8DF;">Bravery Habits</div>
+        </div>
+        <div class="book-card-bottom">
+          <div class="book-title">Bravery Habits</div>
+          <p class="book-desc">Soar with Eddie the Wedge-tailed Eagle and learn to face any challenge with courage and confidence.</p>
+          <span class="book-personality" style="background:#FFEBEE;color:#C0392B;">🦅 Bold &amp; Fearless</span>
+        </div>
+      </div>
+
+      <!-- Book 4 — Coco Cockatoo -->
+      <div class="book-card">
+        <div class="book-card-top" style="background:linear-gradient(135deg,#1565C0,#1976D2);">
+          <div class="book-card-dot" style="background:#FDD835;"></div>
+          <div class="book-number" style="color:#F5F0E0;">Book 04</div>
+          <div class="book-bird-emoji">🦚</div>
+          <div class="book-char-name" style="color:#FDD835;">Coco</div>
+          <div class="book-habit-label" style="color:#F5F0E0;">Wellness Habits</div>
+        </div>
+        <div class="book-card-bottom">
+          <div class="book-title">Wellness Habits</div>
+          <p class="book-desc">Dance and move with Coco the Cockatoo! Build joyful wellness habits that keep body and mind feeling great.</p>
+          <span class="book-personality" style="background:#FFF9C4;color:#F9A825;">💃 Energetic &amp; Joyful</span>
+        </div>
+      </div>
+
+      <!-- Book 5 — Fifi Owl -->
+      <div class="book-card">
+        <div class="book-card-top" style="background:linear-gradient(135deg,#8B6914,#C4873A);">
+          <div class="book-card-dot" style="background:#EDD9B0;"></div>
+          <div class="book-number" style="color:#EDD9B0;">Book 05</div>
+          <!-- Fifi the Owl SVG — final approved two eyes -->
+          <div class="book-bird-emoji" style="font-size:0;line-height:0;">
+            <svg viewBox="188 100 305 300" width="80" height="80" xmlns="http://www.w3.org/2000/svg">
+              <path d="M208 368 Q340 354 472 366" stroke="#8B6530" stroke-width="8" fill="none" stroke-linecap="round"/>
+              <path d="M244 358 Q250 350 256 358" stroke="#5C3A10" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <path d="M316 352 Q322 344 328 352" stroke="#5C3A10" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <path d="M284 302 Q268 320 262 352" stroke="#8B6914" stroke-width="6" fill="none" stroke-linecap="round"/>
+              <path d="M292 305 Q278 322 276 354" stroke="#C4873A" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+              <path d="M300 307 Q290 324 288 354" stroke="#8B6914" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <ellipse cx="340" cy="318" rx="68" ry="54" fill="#C4873A"/>
+              <ellipse cx="340" cy="330" rx="46" ry="38" fill="#EDD9B0"/>
+              <path d="M276 308 Q260 288 276 268 Q290 288 286 312 Z" fill="#8B6914"/>
+              <path d="M404 308 Q420 288 404 268 Q390 288 394 312 Z" fill="#8B6914"/>
+              <circle cx="340" cy="238" r="82" fill="#C4873A"/>
+              <ellipse cx="340" cy="244" rx="64" ry="68" fill="#EDD9B0"/>
+              <path d="M278 188 Q264 148 274 124 Q290 152 286 192Z" fill="#8B6914"/>
+              <path d="M280 186 Q268 152 276 132 Q290 156 286 190Z" fill="#C4873A"/>
+              <path d="M402 188 Q416 148 406 124 Q390 152 394 192Z" fill="#8B6914"/>
+              <path d="M400 186 Q412 152 404 132 Q390 156 394 190Z" fill="#C4873A"/>
+              <circle cx="312" cy="236" r="28" fill="white"/>
+              <circle cx="314" cy="236" r="19" fill="#C4873A"/>
+              <circle cx="314" cy="236" r="12" fill="#1A1A2E"/>
+              <circle cx="321" cy="228" r="5" fill="white"/>
+              <circle cx="312" cy="236" r="28" fill="none" stroke="#8B6914" stroke-width="3"/>
+              <circle cx="368" cy="236" r="28" fill="white"/>
+              <circle cx="370" cy="236" r="19" fill="#C4873A"/>
+              <circle cx="370" cy="236" r="12" fill="#1A1A2E"/>
+              <circle cx="377" cy="228" r="5" fill="white"/>
+              <circle cx="368" cy="236" r="28" fill="none" stroke="#8B6914" stroke-width="3"/>
+              <path d="M330 264 Q340 278 350 264 Q345 258 340 257 Q335 258 330 264Z" fill="#E07B2A"/>
+              <ellipse cx="272" cy="268" rx="18" ry="12" fill="#F06292" opacity="0.2"/>
+              <ellipse cx="408" cy="268" rx="18" ry="12" fill="#F06292" opacity="0.2"/>
+              <line x1="320" y1="358" x2="313" y2="374" stroke="#E07B2A" stroke-width="4" stroke-linecap="round"/>
+              <line x1="313" y1="374" x2="302" y2="381" stroke="#E07B2A" stroke-width="3" stroke-linecap="round"/>
+              <line x1="313" y1="374" x2="310" y2="388" stroke="#E07B2A" stroke-width="3" stroke-linecap="round"/>
+              <line x1="313" y1="374" x2="321" y2="382" stroke="#E07B2A" stroke-width="3" stroke-linecap="round"/>
+              <line x1="358" y1="359" x2="365" y2="374" stroke="#E07B2A" stroke-width="4" stroke-linecap="round"/>
+              <line x1="365" y1="374" x2="356" y2="381" stroke="#E07B2A" stroke-width="3" stroke-linecap="round"/>
+              <line x1="365" y1="374" x2="364" y2="388" stroke="#E07B2A" stroke-width="3" stroke-linecap="round"/>
+              <line x1="365" y1="374" x2="373" y2="381" stroke="#E07B2A" stroke-width="3" stroke-linecap="round"/>
+              <path d="M218 208 L221 198 L224 208 L234 211 L224 214 L221 224 L218 214 L208 211 Z" fill="#4CAF82"/>
+              <circle cx="214" cy="280" r="6" fill="#EDD9B0" opacity="0.8"/>
+              <path d="M446 196 L448 188 L450 196 L458 198 L450 200 L448 208 L446 200 L438 198 Z" fill="#FDD835"/>
+            </svg>
+          </div>
+          <div class="book-char-name" style="color:#EDD9B0;">Fifi</div>
+          <div class="book-habit-label" style="color:#EDD9B0;">Learning Habits</div>
+        </div>
+        <div class="book-card-bottom">
+          <div class="book-title">Learning Habits</div>
+          <p class="book-desc">Ask questions with Fifi the Owl! Cultivate curiosity and a love of discovering something new every single day.</p>
+          <span class="book-personality" style="background:#F1F8E9;color:#558B2F;">🦉 Curious &amp; Wise</span>
+        </div>
+      </div>
+
+      <!-- Book 6 — Quinn Quokka -->
+      <div class="book-card">
+        <div class="book-card-top" style="background:linear-gradient(135deg,#FF6B6B,#C4624E);">
+          <div class="book-card-dot" style="background:#FFF0A0;"></div>
+          <div class="book-number" style="color:#FFF0A0;">Book 06</div>
+          <div class="book-bird-emoji">🦘</div>
+          <div class="book-char-name" style="color:#FFF0A0;">Quinn</div>
+          <div class="book-habit-label" style="color:#FFF0A0;">Happiness Habits</div>
+        </div>
+        <div class="book-card-bottom">
+          <div class="book-title">Happiness Habits</div>
+          <p class="book-desc">Smile with Quinn the Quokka — Australia's happiest animal! Spread joy and build habits that light up every day.</p>
+          <span class="book-personality" style="background:#FFF8E1;color:#F57F17;">😊 Always Smiling</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════ HOW IT WORKS ════ -->
+  <section id="how">
+    <div class="how-inner">
+      <div class="how-head">
+        <span class="section-label">How it works</span>
+        <h2 class="section-title">A 14-day journey in four steps</h2>
+        <p class="section-sub">Simple enough for a four-year-old, rewarding enough for a twelve-year-old. Every book is a self-contained adventure.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-bubble" style="background:#E8F5E9;">📚</div>
+          <div class="step-title">Pick a Book</div>
+          <p class="step-desc">Choose a habit you want to build — morning routines, kindness, bravery, wellness, learning or happiness.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-bubble" style="background:#FFF3E0;">🎨</div>
+          <div class="step-title">14 Days of Fun</div>
+          <p class="step-desc">Each day brings a new activity, colouring page, and micro-habit challenge. Short, fun, and always achievable.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-bubble" style="background:#FFF9C4;">🎓</div>
+          <div class="step-title">Graduate!</div>
+          <p class="step-desc">Complete the journey and earn your official Hatch a Habit graduation certificate. A real moment to celebrate!</p>
+        </div>
+        <div class="step-card">
+          <div class="step-bubble" style="background:#E3F2FD;">🌟</div>
+          <div class="step-title">Next Adventure</div>
+          <p class="step-desc">Pick the next book in the series and keep going. Six habits. Six characters. One big adventure for your little one.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ EMAIL CAPTURE ════ -->
+  <section id="signup">
+    <div class="signup-inner">
+      <span class="section-label">Be first to know</span>
+      <h2 class="signup-title">Hatch a Habit is almost ready to fly 🪺</h2>
+      <p class="signup-sub">Join the flock! Get early access, launch day discounts, and a free printable Ollie colouring page when we launch.</p>
+      <form class="signup-form" onsubmit="handleSignup(event)">
+        <input type="email" placeholder="Your email address" id="email-input" required/>
+        <button type="submit" class="btn">Join the Flock ✨</button>
+      </form>
+      <p class="signup-fine">No spam, ever. Just habit-building goodness for your little ones. 🐦</p>
+    </div>
+  </section>
+
+  <!-- ════ FOOTER ════ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="footer-wordmark">
+          <span class="h">Hatch </span><span class="a">a Habit</span>
+        </a>
+        <div class="footer-tagline-sm">Small habits. Big wings.</div>
+      </div>
+      <div class="footer-palette">
+        <div class="fp" style="background:#1A237E"></div>
+        <div class="fp" style="background:#1565C0"></div>
+        <div class="fp" style="background:#42A5F5"></div>
+        <div class="fp" style="background:#4CAF82"></div>
+        <div class="fp" style="background:#FDD835"></div>
+        <div class="fp" style="background:#F57C00"></div>
+        <div class="fp" style="background:#F06292"></div>
+        <div class="fp" style="background:#66BB6A"></div>
+      </div>
+      <div class="footer-copy">
+        © 2026 Hatch a Habit — VERO&amp; PTY LTD<br/>
+        ABN 37 699 193 676 · ACN 699 193 676<br/>
+        <span style="opacity:.6;font-size:.78rem;">Kev, Ollie, Eddie, Coco, Fifi, Quinn and all Hatch a Habit characters are original creations of VERO&amp; PTY LTD. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function handleSignup(e) {
+      e.preventDefault();
+      const input = document.getElementById('email-input');
+      const btn = e.target.querySelector('button');
+      btn.textContent = '🎉 You\'re on the list!';
+      btn.style.background = '#3A9E70';
+      input.value = '';
+      input.disabled = true;
+      btn.disabled = true;
+    }
+  </script>
+
+</body>
+</html>
