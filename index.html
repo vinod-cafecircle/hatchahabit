@@ -1252,16 +1252,52 @@
     </div>
   </footer>
 
-  <script>
-    function handleSignup(e) {
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDKi8F5J2B-9PTortS6a6YusmC6wC3cEZU",
+      authDomain: "hatchahabit-59817.firebaseapp.com",
+      projectId: "hatchahabit-59817",
+      storageBucket: "hatchahabit-59817.firebasestorage.app",
+      messagingSenderId: "717204962243",
+      appId: "1:717204962243:web:ebcc722e190387f65edb76"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    window.handleSignup = async function(e) {
       e.preventDefault();
       const input = document.getElementById('email-input');
       const btn = e.target.querySelector('button');
-      btn.textContent = '🎉 You\'re on the list!';
-      btn.style.background = '#3A9E70';
-      input.value = '';
-      input.disabled = true;
-      btn.disabled = true;
+      const email = input.value.trim();
+
+      if (!email) return;
+
+      try {
+        btn.textContent = 'Saving...';
+        btn.disabled = true;
+        input.disabled = true;
+
+        await addDoc(collection(db, 'signups'), {
+          email: email,
+          timestamp: serverTimestamp(),
+          source: 'hatchahabit.com.au'
+        });
+
+        btn.textContent = '🎉 You\'re on the list!';
+        btn.style.background = '#3A9E70';
+        input.value = '';
+
+      } catch (error) {
+        console.error('Error saving email:', error);
+        btn.textContent = 'Try again';
+        btn.disabled = false;
+        input.disabled = false;
+        btn.style.background = '#e53935';
+      }
     }
   </script>
 
