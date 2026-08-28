@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /read/
+
+User-agent: *
+Allow: /
