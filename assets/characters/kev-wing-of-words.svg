@@ -1,0 +1,54 @@
+<svg class="page" viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="540" fill="#1A237E"/>
+  <circle cx="480" cy="320" r="420" fill="none" stroke="#1565C0" stroke-width="2" opacity="0.4"/>
+  <circle cx="480" cy="320" r="300" fill="none" stroke="#1565C0" stroke-width="2" opacity="0.35"/>
+  <path d="M0 0 L98 0 L0 98 Z" fill="#FDD835" opacity="0.1"/><path d="M960 0 L862 0 L960 98 Z" fill="#FDD835" opacity="0.1"/>
+  <path d="M0 540 L98 540 L0 442 Z" fill="#4CAF82" opacity="0.1"/><path d="M960 540 L862 540 L960 442 Z" fill="#4CAF82" opacity="0.1"/>
+  <path d="M84 84 L88 70 L92 84 L106 88 L92 92 L88 106 L84 92 L70 88 Z" fill="#FDD835" opacity="0.8"/>
+  <text font-family="Fredoka One, cursive" font-size="22" fill="#4CAF82" letter-spacing="3" x="480" y="54" text-anchor="middle">KEV'S WING OF WORDS</text>
+  <g transform="translate(380, 180) scale(0.38)">
+    <path d="M260 292 Q192 224 154 164 Q222 214 268 282 Z" fill="#5C3A1E"/>
+    <path d="M264 286 Q212 232 192 188 Q248 226 270 278 Z" fill="#8B5E3C"/>
+    <path d="M376 292 Q444 224 482 164 Q414 214 368 282 Z" fill="#5C3A1E"/>
+    <path d="M372 286 Q424 232 444 188 Q388 226 366 278 Z" fill="#8B5E3C"/>
+    <ellipse cx="318" cy="306" rx="72" ry="58" fill="#8B5E3C"/>
+    <ellipse cx="318" cy="318" rx="48" ry="38" fill="#FDECC8"/>
+    <circle cx="318" cy="204" r="80" fill="#FDECC8"/>
+    <path d="M246 188 Q262 120 318 108 Q374 120 390 188 Q364 156 318 152 Q272 156 246 188Z" fill="#5C3A1E"/>
+    <path d="M310 128 Q304 66 314 38 Q326 68 322 130Z" fill="#8B5E3C"/>
+    <circle cx="284" cy="192" r="22" fill="white"/><circle cx="286" cy="190" r="14" fill="#1A1A2E"/><circle cx="292" cy="184" r="6" fill="white"/>
+    <circle cx="352" cy="190" r="22" fill="white"/><circle cx="354" cy="188" r="14" fill="#1A1A2E"/><circle cx="360" cy="182" r="6" fill="white"/>
+    <path d="M318 208 L318 208 L368 220 L318 232 Z" fill="#E07B2A"/>
+    <circle cx="200" cy="230" r="12" fill="#FDD835" opacity="0.9"/>
+    <circle cx="200" cy="230" r="7" fill="#F9A825"/>
+  </g>
+  <rect x="42" y="168" width="198" height="30" rx="14" fill="#FDD835" opacity="0.15"/><rect x="42" y="168" width="198" height="30" rx="14" fill="none" stroke="#FDD835" stroke-width="1.2" opacity="0.6"/>
+  <text font-family="Patrick Hand, cursive" font-size="17" fill="#FDD835" x="141" y="189" text-anchor="middle">Day 1 — I believe in me!</text>
+  <rect x="28" y="210" width="192" height="30" rx="14" fill="#FDD835" opacity="0.12"/><rect x="28" y="210" width="192" height="30" rx="14" fill="none" stroke="#FDD835" stroke-width="1.2" opacity="0.5"/>
+  <text font-family="Patrick Hand, cursive" font-size="17" fill="#FDD835" x="124" y="231" text-anchor="middle">Day 2 — I am strong!</text>
+  <rect x="22" y="252" width="216" height="30" rx="14" fill="#4CAF82" opacity="0.12"/><rect x="22" y="252" width="216" height="30" rx="14" fill="none" stroke="#4CAF82" stroke-width="1.2" opacity="0.5"/>
+  <text font-family="Patrick Hand, cursive" font-size="17" fill="#4CAF82" x="130" y="273" text-anchor="middle">Day 3 — My voice matters!</text>
+  <rect x="22" y="294" width="232" height="30" rx="14" fill="#4CAF82" opacity="0.12"/><rect x="22" y="294" width="232" height="30" rx="14" fill="none" stroke="#4CAF82" stroke-width="1.2" opacity="0.5"/>
+  <text font-family="Patrick Hand, cursive" font-size="17" fill="#4CAF82" x="138" y="315" text-anchor="middle">Day 4 — I can do hard things!</text>
+  <rect x="28" y="336" width="238" height="30" rx="14" fill="#F06292" opacity="0.12"/><rect x="28" y="336" width="238" height="30" rx="14" fill="none" stroke="#F06292" stroke-width="1.2" opacity="0.5"/>
+  <text font-family="Patrick Hand, cursive" font-size="17" fill="#F06292" x="147" y="357" text-anchor="middle">Day 5 — I show up every day!</text>
+  <rect x="40" y="378" width="196" height="30" rx="14" fill="#F06292" opacity="0.12"/><rect x="40" y="378" width="196" height="30" rx="14" fill="none" stroke="#F06292" stroke-width="1.2" opacity="0.5"/>
+  <text font-family="Patrick Hand, cursive" font-size="17" fill="#F06292" x="138" y="399" text-anchor="middle">Day 6 — I am kind!</text>
+  <rect x="58" y="420" width="196" height="30" rx="14" fill="#FF5C00" opacity="0.12"/><rect x="58" y="420" width="196" height="30" rx="14" fill="none" stroke="#FF5C00" stroke-width="1.2" opacity="0.5"/>
+  <text font-family="Patrick Hand, cursive" font-size="17" fill="#FF5C00" x="156" y="441" text-anchor="middle">Day 7 — I am brave!</text>
+  <rect x="720" y="168" width="198" height="30" rx="14" fill="#FDD835" opacity="0.15"/><rect x="720" y="168" width="198" height="30" rx="14" fill="none" stroke="#FDD835" stroke-width="1.2" opacity="0.6"/>
+  <text font-family="Patrick Hand, cursive" font-size="17" fill="#FDD835" x="819" y="189" text-anchor="middle">Day 8 — I am enough!</text>
+  <rect x="740" y="210" width="196" height="30" rx="14" fill="#FDD835" opacity="0.12"/><rect x="740" y="210" width="196" height="30" rx="14" fill="none" stroke="#FDD835" stroke-width="1.2" opacity="0.5"/>
+  <text font-family="Patrick Hand, cursive" font-size="17" fill="#FDD835" x="838" y="231" text-anchor="middle">Day 9 — I take care of me!</text>
+  <rect x="722" y="252" width="216" height="30" rx="14" fill="#4CAF82" opacity="0.12"/><rect x="722" y="252" width="216" height="30" rx="14" fill="none" stroke="#4CAF82" stroke-width="1.2" opacity="0.5"/>
+  <text font-family="Patrick Hand, cursive" font-size="17" fill="#4CAF82" x="830" y="273" text-anchor="middle">Day 10 — I love to learn!</text>
+  <rect x="710" y="294" width="228" height="30" rx="14" fill="#4CAF82" opacity="0.12"/><rect x="710" y="294" width="228" height="30" rx="14" fill="none" stroke="#4CAF82" stroke-width="1.2" opacity="0.5"/>
+  <text font-family="Patrick Hand, cursive" font-size="17" fill="#4CAF82" x="824" y="315" text-anchor="middle">Day 11 — I am grateful!</text>
+  <rect x="694" y="336" width="238" height="30" rx="14" fill="#F06292" opacity="0.12"/><rect x="694" y="336" width="238" height="30" rx="14" fill="none" stroke="#F06292" stroke-width="1.2" opacity="0.5"/>
+  <text font-family="Patrick Hand, cursive" font-size="17" fill="#F06292" x="813" y="357" text-anchor="middle">Day 12 — I belong here!</text>
+  <rect x="706" y="378" width="212" height="30" rx="14" fill="#F06292" opacity="0.12"/><rect x="706" y="378" width="212" height="30" rx="14" fill="none" stroke="#F06292" stroke-width="1.2" opacity="0.5"/>
+  <text font-family="Patrick Hand, cursive" font-size="17" fill="#F06292" x="812" y="399" text-anchor="middle">Day 13 — I am ready!</text>
+  <rect x="282" y="464" width="396" height="36" rx="18" fill="#FDD835" opacity="0.18"/><rect x="282" y="464" width="396" height="36" rx="18" fill="none" stroke="#FDD835" stroke-width="2" opacity="0.9"/>
+  <text font-family="Fredoka One, cursive" font-size="18" fill="#FDD835" x="480" y="488" text-anchor="middle">Day 14 — Words have wings — and so do I!</text>
+  <text font-family="Fredoka One, cursive" font-size="14" fill="white" opacity="0.25" x="480" y="528" text-anchor="middle">Small habits. Big wings.</text>
+</svg>

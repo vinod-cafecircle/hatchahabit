@@ -1,0 +1,58 @@
+<svg class="page" viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="540" fill="#1A237E"/>
+  <circle cx="480" cy="282" r="396" fill="none" stroke="#1565C0" stroke-width="2" opacity="0.5"/>
+  <circle cx="480" cy="282" r="310" fill="none" stroke="#1565C0" stroke-width="2" opacity="0.5"/>
+  <circle cx="480" cy="282" r="226" fill="none" stroke="#1565C0" stroke-width="2" opacity="0.4"/>
+  <circle cx="480" cy="282" r="142" fill="none" stroke="#1565C0" stroke-width="2" opacity="0.4"/>
+  <path d="M0 0 L98 0 L0 98 Z" fill="#FDD835" opacity="0.1"/><path d="M960 0 L862 0 L960 98 Z" fill="#FDD835" opacity="0.1"/>
+  <path d="M0 540 L98 540 L0 442 Z" fill="#4CAF82" opacity="0.1"/><path d="M960 540 L862 540 L960 442 Z" fill="#4CAF82" opacity="0.1"/>
+  <path d="M84 84 L88 70 L92 84 L106 88 L92 92 L88 106 L84 92 L70 88 Z" fill="#FDD835" opacity="0.8"/>
+  <circle cx="170" cy="226" r="7" fill="#F06292" opacity="0.6"/>
+  <circle cx="790" cy="212" r="6" fill="#4CAF82" opacity="0.6"/>
+  <circle cx="340" cy="506" r="5" fill="#FDD835" opacity="0.5"/><circle cx="396" cy="506" r="5" fill="#4CAF82" opacity="0.5"/><circle cx="452" cy="506" r="5" fill="#FF5C00" opacity="0.5"/><circle cx="508" cy="506" r="5" fill="#FDD835" opacity="0.5"/><circle cx="564" cy="506" r="5" fill="#4CAF82" opacity="0.5"/><circle cx="620" cy="506" r="5" fill="#FF5C00" opacity="0.5"/>
+  <g transform="translate(498, 180) scale(0.68)">
+    <path d="M260 292 Q210 250 178 208 Q232 244 268 282 Z" fill="#5C3A1E"/>
+    <path d="M264 286 Q220 252 206 218 Q248 246 270 278 Z" fill="#8B5E3C"/>
+    <path d="M376 292 Q426 250 458 208 Q404 244 368 282 Z" fill="#5C3A1E"/>
+    <path d="M372 286 Q416 252 430 218 Q388 246 366 278 Z" fill="#8B5E3C"/>
+    <ellipse cx="318" cy="306" rx="72" ry="58" fill="#8B5E3C"/>
+    <ellipse cx="318" cy="318" rx="48" ry="38" fill="#FDECC8"/>
+    <circle cx="318" cy="204" r="80" fill="#FDECC8"/>
+    <path d="M246 188 Q262 120 318 108 Q374 120 390 188 Q364 156 318 152 Q272 156 246 188Z" fill="#5C3A1E"/>
+    <path d="M290 134 Q276 84 286 58 Q300 86 298 136Z" fill="#5C3A1E"/>
+    <path d="M310 128 Q304 66 314 38 Q326 68 322 130Z" fill="#8B5E3C"/>
+    <path d="M330 130 Q328 60 336 34 Q346 64 342 132Z" fill="#5C3A1E"/>
+    <circle cx="284" cy="192" r="22" fill="white"/><circle cx="286" cy="190" r="14" fill="#1A1A2E"/><circle cx="292" cy="184" r="6" fill="white"/>
+    <circle cx="352" cy="190" r="22" fill="white"/><circle cx="354" cy="188" r="14" fill="#1A1A2E"/><circle cx="360" cy="182" r="6" fill="white"/>
+    <path d="M318 208 L318 208 L368 220 L318 232 Z" fill="#E07B2A"/>
+    <line x1="296" y1="358" x2="288" y2="375" stroke="#E07B2A" stroke-width="5" stroke-linecap="round"/>
+    <line x1="340" y1="358" x2="348" y2="375" stroke="#E07B2A" stroke-width="5" stroke-linecap="round"/>
+    <path d="M264 286 Q230 310 200 340 Q220 306 252 290 Z" fill="#8B5E3C"/>
+  </g>
+  <g transform="translate(310, 290) rotate(-35)">
+    <line x1="0" y1="120" x2="0" y2="-80" stroke="#8B6914" stroke-width="4" stroke-linecap="round"/>
+    <path d="M0 -60 Q-22 -50 -32 -38 Q-16 -46 0 -44Z" fill="#FDD835"/>
+    <path d="M0 -38 Q-28 -26 -40 -12 Q-22 -22 0 -20Z" fill="#FDD835"/>
+    <path d="M0 -16 Q-30 -2 -42 14 Q-24 2 0 4Z" fill="#FDD835"/>
+    <path d="M0 8 Q-30 24 -40 42 Q-22 28 0 28Z" fill="#FDD835"/>
+    <path d="M0 32 Q-28 50 -36 68 Q-20 54 0 52Z" fill="#FDD835" opacity="0.9"/>
+    <path d="M0 56 Q-24 72 -28 88 Q-14 76 0 76Z" fill="#FDD835" opacity="0.75"/>
+    <path d="M0 -60 Q22 -50 32 -38 Q16 -46 0 -44Z" fill="#F9A825"/>
+    <path d="M0 -38 Q28 -26 40 -12 Q22 -22 0 -20Z" fill="#F9A825"/>
+    <path d="M0 -16 Q30 -2 42 14 Q24 2 0 4Z" fill="#F9A825"/>
+    <path d="M0 8 Q30 24 40 42 Q22 28 0 28Z" fill="#F9A825"/>
+    <path d="M0 32 Q28 50 36 68 Q20 54 0 52Z" fill="#F9A825" opacity="0.9"/>
+    <path d="M0 56 Q24 72 28 88 Q14 76 0 76Z" fill="#F9A825" opacity="0.75"/>
+    <ellipse cx="0" cy="20" rx="30" ry="80" fill="#FDD835" opacity="0.12"/>
+    <circle cx="-48" cy="10" r="3" fill="#FDD835" opacity="0.7"/>
+    <circle cx="50" cy="-20" r="2.5" fill="#FDD835" opacity="0.6"/>
+    <circle cx="-40" cy="-40" r="2" fill="#FDD835" opacity="0.5"/>
+    <circle cx="44" cy="40" r="2" fill="#FDD835" opacity="0.5"/>
+  </g>
+  <text font-family="Patrick Hand, cursive" font-size="30" fill="white" x="56" y="200">"This golden feather</text>
+  <text font-family="Patrick Hand, cursive" font-size="30" fill="white" x="56" y="244">is yours now."</text>
+  <text font-family="Fredoka One, cursive" font-size="44" fill="#FDD835" x="56" y="320">"You earned it."</text>
+  <text font-family="Patrick Hand, cursive" font-size="26" fill="white" opacity="0.8" x="56" y="390">said Kev,</text>
+  <text font-family="Patrick Hand, cursive" font-size="26" fill="white" opacity="0.8" x="56" y="428">right to you.</text>
+  <text font-family="Fredoka One, cursive" font-size="14" fill="white" opacity="0.25" x="480" y="528" text-anchor="middle">2026 Hatch a Habit - VERO PTY LTD</text>
+</svg>
