@@ -610,49 +610,115 @@ body {
   <path d="M0 398 Q226 380 452 390 Q678 380 960 390" stroke="#1A2860" stroke-width="22" fill="none" stroke-linecap="round"/>
   <path d="M0 398 Q226 380 452 390 Q678 380 960 390" stroke="#243070" stroke-width="14" fill="none" stroke-linecap="round"/>
   <rect x="0" y="520" width="960" height="20" fill="#090F28"/>
-  <!-- Mid branch with four friend silhouettes -->
-  <rect x="300" y="298" width="320" height="11" rx="5" fill="#2C1A0E"/>
-  <!-- Ollie — tiny round electric blue -->
-  <ellipse cx="330" cy="280" rx="13" ry="11" fill="#1565C0"/><circle cx="330" cy="267" r="9" fill="#1565C0"/>
-  <path d="M324 291 L318 302" stroke="#1565C0" stroke-width="3" stroke-linecap="round"/>
-  <path d="M336 291 L342 302" stroke="#1565C0" stroke-width="3" stroke-linecap="round"/>
-  <!-- Rudie — large dark with wings hinted -->
-  <ellipse cx="410" cy="276" rx="24" ry="17" fill="#2C1A0E"/><circle cx="410" cy="257" r="16" fill="#2C1A0E"/>
-  <path d="M386 272 Q370 260 356 250" stroke="#2C1A0E" stroke-width="7" stroke-linecap="round" fill="none"/>
-  <path d="M434 272 Q450 260 464 250" stroke="#2C1A0E" stroke-width="7" stroke-linecap="round" fill="none"/>
-  <path d="M404 291 L400 305" stroke="#2C1A0E" stroke-width="4" stroke-linecap="round"/>
-  <path d="M416 291 L420 305" stroke="#2C1A0E" stroke-width="4" stroke-linecap="round"/>
-  <!-- Coco — teal with fan tail -->
-  <ellipse cx="490" cy="280" rx="18" ry="13" fill="#0097A7"/><circle cx="490" cy="265" r="13" fill="#0097A7"/>
-  <path d="M476 290 Q465 308 458 320" stroke="#0097A7" stroke-width="5" stroke-linecap="round" fill="none"/>
-  <path d="M483 292 Q478 312 474 326" stroke="#0097A7" stroke-width="4" stroke-linecap="round" fill="none"/>
-  <path d="M490 293 Q490 314 490 328" stroke="#0097A7" stroke-width="4" stroke-linecap="round" fill="none"/>
-  <path d="M497 292 Q502 312 506 326" stroke="#0097A7" stroke-width="4" stroke-linecap="round" fill="none"/>
-  <path d="M490 291 L488 305" stroke="#0097A7" stroke-width="3" stroke-linecap="round"/>
-  <!-- Fifi — amber, large round head, upright -->
-  <ellipse cx="570" cy="282" rx="13" ry="11" fill="#8B6914"/><circle cx="570" cy="262" r="17" fill="#8B6914"/>
-  <circle cx="563" cy="260" r="5" fill="white" opacity="0.9"/><circle cx="577" cy="260" r="5" fill="white" opacity="0.9"/>
-  <path d="M564 291 L561 303" stroke="#8B6914" stroke-width="3" stroke-linecap="round"/>
-  <path d="M576 291 L579 303" stroke="#8B6914" stroke-width="3" stroke-linecap="round"/>
-  <!-- Speech bubbles — fragments -->
-  <rect x="310" y="224" width="220" height="30" rx="14" fill="white" opacity="0.07"/><rect x="310" y="224" width="220" height="30" rx="14" fill="none" stroke="white" stroke-width="1" opacity="0.25"/>
-  <text font-family="Patrick Hand, cursive" font-size="17" fill="white" opacity="0.75" x="420" y="244" text-anchor="middle">"…they say if you truly believe…"</text>
-  <rect x="390" y="188" width="130" height="28" rx="12" fill="white" opacity="0.05"/><rect x="390" y="188" width="130" height="28" rx="12" fill="none" stroke="#FDD835" stroke-width="1" opacity="0.2"/>
-  <text font-family="Patrick Hand, cursive" font-size="16" fill="#FDD835" opacity="0.65" x="455" y="207" text-anchor="middle">"…one feather…"</text>
-  <rect x="470" y="156" width="148" height="26" rx="12" fill="white" opacity="0.05"/><rect x="470" y="156" width="148" height="26" rx="12" fill="none" stroke="#FDD835" stroke-width="1" opacity="0.2"/>
-  <text font-family="Patrick Hand, cursive" font-size="16" fill="#FDD835" opacity="0.75" x="544" y="174" text-anchor="middle">"…turns gold…?"</text>
-  <!-- Higher branch -->
-  <rect x="100" y="218" width="140" height="8" rx="3" fill="#3D2208" opacity="0.6"/>
-  <!-- Gum leaf obscuring Kev -->
-  <ellipse cx="175" cy="200" rx="56" ry="34" fill="#0A1232" transform="rotate(-18 175 200)"/>
-  <!-- Kev peeking — head and one wide eye visible -->
-  <circle cx="188" cy="212" r="22" fill="#FDECC8" opacity="0.92"/>
-  <path d="M166 200 Q180 188 196 196 Q200 206 194 212 Q180 210 166 200Z" fill="#5C3A1E"/>
-  <path d="M180 128 Q174 108 178 96 Q184 110 182 130Z" fill="#5C3A1E"/>
-  <path d="M192 125 Q188 104 194 90 Q200 106 196 127Z" fill="#8B5E3C"/>
-  <path d="M204 127 Q202 106 208 94 Q214 110 209 129Z" fill="#5C3A1E"/>
-  <circle cx="196" cy="210" r="9" fill="white"/><circle cx="198" cy="210" r="5.5" fill="#1A1A2E"/><circle cx="200" cy="208" r="2" fill="white"/>
-  <!-- Kev thought — bottom left -->
+  <!-- Mid branch for friends -->
+  <rect x="290" y="300" width="380" height="11" rx="5" fill="#2C1A0E"/>
+  <!-- Four friends on branch using real character SVGs -->
+  <g transform="translate(300, 272) scale(0.20)">
+    <path d="M162 218 Q138 248 128 296" stroke="#1a237e" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <ellipse cx="208" cy="258" rx="72" ry="62" fill="#1565C0"/><ellipse cx="222" cy="274" rx="42" ry="36" fill="#90CAF9"/>
+    <path d="M142 252 Q126 224 148 200 Q164 224 162 258 Z" fill="#0D47A1"/>
+    <path d="M272 246 Q290 218 272 194 Q256 218 258 250 Z" fill="#0D47A1"/>
+    <circle cx="208" cy="188" r="56" fill="#1a237e"/>
+    <path d="M186 136 Q180 108 184 92 Q192 110 189 136" fill="#1565C0"/>
+    <path d="M200 130 Q196 100 200 82 Q210 102 206 130" fill="#42A5F5"/>
+    <path d="M215 130 Q214 98 220 80 Q230 100 224 130" fill="#42A5F5"/>
+    <path d="M229 133 Q231 102 237 88 Q245 108 240 133" fill="#1565C0"/>
+    <circle cx="224" cy="182" r="20" fill="white"/><circle cx="227" cy="182" r="13" fill="#0D1B4B"/><circle cx="232" cy="176" r="5" fill="white"/>
+    <path d="M256 193 L278 187 L256 204 Z" fill="#F57C00"/>
+    <line x1="192" y1="316" x2="184" y2="338" stroke="#F57C00" stroke-width="4" stroke-linecap="round"/><line x1="184" y1="338" x2="170" y2="346" stroke="#F57C00" stroke-width="3" stroke-linecap="round"/><line x1="184" y1="338" x2="196" y2="348" stroke="#F57C00" stroke-width="3" stroke-linecap="round"/>
+    <line x1="228" y1="318" x2="236" y2="340" stroke="#F57C00" stroke-width="4" stroke-linecap="round"/><line x1="236" y1="340" x2="248" y2="346" stroke="#F57C00" stroke-width="3" stroke-linecap="round"/>
+    <path d="M310 110 L313 98 L316 110 L328 113 L316 116 L313 128 L310 116 L298 113 Z" fill="#FDD835"/>
+    <circle cx="80" cy="160" r="6" fill="#F06292"/>
+  </g>
+  <g transform="translate(370, 255) scale(0.30)">
+
+    <path d="M228 294 Q202 322 194 360" stroke="#8B5E3C" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <ellipse cx="318" cy="302" rx="72" ry="60" fill="#8B5E3C"/><ellipse cx="330" cy="316" rx="48" ry="38" fill="#FDECC8"/>
+    <path d="M260 288 Q228 248 238 208 Q262 248 270 292 Z" fill="#5C3A1E"/>
+    <circle cx="322" cy="200" r="80" fill="#FDECC8"/>
+    <path d="M250 184 Q264 116 322 104 Q380 116 394 184 Q368 152 322 148 Q276 152 250 184Z" fill="#5C3A1E"/>
+    <path d="M298 130 Q284 82 294 56 Q308 84 306 132Z" fill="#5C3A1E"/>
+    <path d="M318 124 Q312 64 322 36 Q334 66 330 126Z" fill="#8B5E3C"/>
+    <path d="M338 122 Q336 52 344 26 Q352 54 348 124Z" fill="#5C3A1E"/>
+    <circle cx="360" cy="196" r="22" fill="white"/><circle cx="362" cy="192" r="14" fill="#1A1A2E"/><circle cx="368" cy="186" r="6" fill="white"/>
+    <path d="M346 178 Q360 168 374 174" stroke="#5C3A1E" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M392 204 L448 196 L392 218 Z" fill="#E07B2A"/>
+    <line x1="300" y1="358" x2="293" y2="374" stroke="#E07B2A" stroke-width="4.5" stroke-linecap="round"/><line x1="293" y1="374" x2="281" y2="381" stroke="#E07B2A" stroke-width="3.5" stroke-linecap="round"/><line x1="293" y1="374" x2="289" y2="388" stroke="#E07B2A" stroke-width="3.5" stroke-linecap="round"/><line x1="293" y1="374" x2="302" y2="382" stroke="#E07B2A" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="336" y1="360" x2="343" y2="374" stroke="#E07B2A" stroke-width="4.5" stroke-linecap="round"/><line x1="343" y1="374" x2="333" y2="381" stroke="#E07B2A" stroke-width="3.5" stroke-linecap="round"/><line x1="343" y1="374" x2="341" y2="388" stroke="#E07B2A" stroke-width="3.5" stroke-linecap="round"/><line x1="343" y1="374" x2="352" y2="381" stroke="#E07B2A" stroke-width="3.5" stroke-linecap="round"/>
+  
+  </g>
+  <g transform="translate(460, 265) scale(0.28)">
+    <path d="M228 294 Q202 322 194 360" stroke="#8B5E3C" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <ellipse cx="318" cy="302" rx="72" ry="60" fill="#8B5E3C"/><ellipse cx="330" cy="316" rx="48" ry="38" fill="#FDECC8"/>
+    <path d="M260 288 Q228 248 238 208 Q262 248 270 292 Z" fill="#5C3A1E"/>
+    <circle cx="322" cy="200" r="80" fill="#FDECC8"/>
+    <path d="M250 184 Q264 116 322 104 Q380 116 394 184 Q368 152 322 148 Q276 152 250 184Z" fill="#5C3A1E"/>
+    <path d="M298 130 Q284 82 294 56 Q308 84 306 132Z" fill="#5C3A1E"/>
+    <path d="M318 124 Q312 64 322 36 Q334 66 330 126Z" fill="#8B5E3C"/>
+    <path d="M338 122 Q336 52 344 26 Q352 54 348 124Z" fill="#5C3A1E"/>
+    <circle cx="360" cy="196" r="22" fill="white"/><circle cx="362" cy="192" r="14" fill="#1A1A2E"/><circle cx="368" cy="186" r="6" fill="white"/>
+    <path d="M346 178 Q360 168 374 174" stroke="#5C3A1E" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M392 204 L448 196 L392 218 Z" fill="#E07B2A"/>
+    <line x1="300" y1="358" x2="293" y2="374" stroke="#E07B2A" stroke-width="4.5" stroke-linecap="round"/><line x1="293" y1="374" x2="281" y2="381" stroke="#E07B2A" stroke-width="3.5" stroke-linecap="round"/><line x1="293" y1="374" x2="289" y2="388" stroke="#E07B2A" stroke-width="3.5" stroke-linecap="round"/><line x1="293" y1="374" x2="302" y2="382" stroke="#E07B2A" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="336" y1="360" x2="343" y2="374" stroke="#E07B2A" stroke-width="4.5" stroke-linecap="round"/><line x1="343" y1="374" x2="333" y2="381" stroke="#E07B2A" stroke-width="3.5" stroke-linecap="round"/><line x1="343" y1="374" x2="341" y2="388" stroke="#E07B2A" stroke-width="3.5" stroke-linecap="round"/><line x1="343" y1="374" x2="352" y2="381" stroke="#E07B2A" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(555, 260) scale(0.32)">
+    <path d="M284 302 Q268 320 262 352" stroke="#8B6914" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M292 305 Q278 322 276 354" stroke="#C4873A" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+    <path d="M300 307 Q290 324 288 354" stroke="#8B6914" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <ellipse cx="340" cy="318" rx="68" ry="54" fill="#C4873A"/>
+    <ellipse cx="340" cy="330" rx="46" ry="38" fill="#EDD9B0"/>
+    <path d="M276 308 Q260 288 276 268 Q290 288 286 312 Z" fill="#8B6914"/>
+    <path d="M404 308 Q420 288 404 268 Q390 288 394 312 Z" fill="#8B6914"/>
+    <circle cx="340" cy="238" r="82" fill="#C4873A"/>
+    <ellipse cx="340" cy="244" rx="64" ry="68" fill="#EDD9B0"/>
+    <path d="M278 188 Q264 148 274 124 Q290 152 286 192Z" fill="#8B6914"/>
+    <path d="M280 186 Q268 152 276 132 Q290 156 286 190Z" fill="#C4873A"/>
+    <path d="M402 188 Q416 148 406 124 Q390 152 394 192Z" fill="#8B6914"/>
+    <path d="M400 186 Q412 152 404 132 Q390 156 394 190Z" fill="#C4873A"/>
+    <circle cx="312" cy="236" r="28" fill="white"/><circle cx="314" cy="236" r="19" fill="#C4873A"/><circle cx="314" cy="236" r="12" fill="#1A1A2E"/><circle cx="321" cy="228" r="5" fill="white"/>
+    <circle cx="312" cy="236" r="28" fill="none" stroke="#8B6914" stroke-width="3"/>
+    <circle cx="368" cy="236" r="28" fill="white"/><circle cx="370" cy="236" r="19" fill="#C4873A"/><circle cx="370" cy="236" r="12" fill="#1A1A2E"/><circle cx="377" cy="228" r="5" fill="white"/>
+    <circle cx="368" cy="236" r="28" fill="none" stroke="#8B6914" stroke-width="3"/>
+    <path d="M330 264 Q340 278 350 264 Q345 258 340 257 Q335 258 330 264Z" fill="#E07B2A"/>
+    <ellipse cx="272" cy="268" rx="18" ry="12" fill="#F06292" opacity="0.25"/>
+    <ellipse cx="408" cy="268" rx="18" ry="12" fill="#F06292" opacity="0.25"/>
+    <line x1="320" y1="358" x2="313" y2="374" stroke="#E07B2A" stroke-width="4" stroke-linecap="round"/><line x1="313" y1="374" x2="302" y2="381" stroke="#E07B2A" stroke-width="3" stroke-linecap="round"/><line x1="313" y1="374" x2="310" y2="388" stroke="#E07B2A" stroke-width="3" stroke-linecap="round"/><line x1="313" y1="374" x2="321" y2="382" stroke="#E07B2A" stroke-width="3" stroke-linecap="round"/>
+    <line x1="358" y1="359" x2="365" y2="374" stroke="#E07B2A" stroke-width="4" stroke-linecap="round"/><line x1="365" y1="374" x2="356" y2="381" stroke="#E07B2A" stroke-width="3" stroke-linecap="round"/><line x1="365" y1="374" x2="364" y2="388" stroke="#E07B2A" stroke-width="3" stroke-linecap="round"/><line x1="365" y1="374" x2="373" y2="381" stroke="#E07B2A" stroke-width="3" stroke-linecap="round"/>
+    <path d="M218 208 L221 198 L224 208 L234 211 L224 214 L221 224 L218 214 L208 211 Z" fill="#4CAF82"/>
+    <path d="M446 196 L448 188 L450 196 L458 198 L450 200 L448 208 L446 200 L438 198 Z" fill="#FDD835"/>
+  </g>
+  <!-- Speech bubbles — fragments of the legend -->
+  <rect x="310" y="224" width="220" height="30" rx="14" fill="white" opacity="0.07"/>
+  <rect x="310" y="224" width="220" height="30" rx="14" fill="none" stroke="white" stroke-width="1" opacity="0.25"/>
+  <text font-family="Patrick Hand, cursive" font-size="17" fill="white" opacity="0.8" x="420" y="244" text-anchor="middle">"…they say if you truly believe…"</text>
+  <rect x="400" y="190" width="130" height="28" rx="12" fill="white" opacity="0.05"/>
+  <rect x="400" y="190" width="130" height="28" rx="12" fill="none" stroke="#FDD835" stroke-width="1" opacity="0.2"/>
+  <text font-family="Patrick Hand, cursive" font-size="16" fill="#FDD835" opacity="0.7" x="465" y="209" text-anchor="middle">"…one feather…"</text>
+  <rect x="490" y="158" width="148" height="26" rx="12" fill="white" opacity="0.05"/>
+  <rect x="490" y="158" width="148" height="26" rx="12" fill="none" stroke="#FDD835" stroke-width="1" opacity="0.2"/>
+  <text font-family="Patrick Hand, cursive" font-size="16" fill="#FDD835" opacity="0.8" x="564" y="176" text-anchor="middle">"…turns gold…?"</text>
+  <!-- Higher branch for Kev -->
+  <rect x="80" y="218" width="150" height="8" rx="3" fill="#3D2208" opacity="0.6"/>
+  <!-- Gum leaf hiding Kev -->
+  <ellipse cx="172" cy="200" rx="58" ry="36" fill="#0A1232" transform="rotate(-18 172 200)"/>
+  <!-- Kev peeking — just his head and one wide eye -->
+  <g transform="translate(120, 195) scale(0.42)">
+    <ellipse cx="118" cy="182" rx="76" ry="58" fill="#8B5E3C"/><ellipse cx="130" cy="196" rx="52" ry="40" fill="#FDECC8"/>
+    <path d="M72 172 Q56 150 70 128 Q86 150 84 176 Z" fill="#5C3A1E"/>
+    <circle cx="118" cy="108" r="78" fill="#FDECC8"/>
+    <path d="M50 92 Q64 28 118 16 Q172 28 186 92 Q162 62 118 58 Q74 62 50 92Z" fill="#5C3A1E"/>
+    <path d="M90 34 Q84 -10 90 -32 Q102 -8 98 36Z" fill="#5C3A1E"/><path d="M110 28 Q106 -18 114 -42 Q126 -16 120 30Z" fill="#8B5E3C"/><path d="M130 30 Q128 -16 138 -40 Q148 -14 140 32Z" fill="#5C3A1E"/>
+    <path d="M140 100 Q154 92 168 100" stroke="#5C3A1E" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M141 106 Q154 113 167 106" stroke="#FDECC8" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M178 108 L228 103 L180 120 Z" fill="#E07B2A"/>
+    <line x1="98" y1="236" x2="90" y2="254" stroke="#E07B2A" stroke-width="5" stroke-linecap="round"/><line x1="90" y1="254" x2="76" y2="262" stroke="#E07B2A" stroke-width="4" stroke-linecap="round"/><line x1="90" y1="254" x2="86" y2="270" stroke="#E07B2A" stroke-width="4" stroke-linecap="round"/><line x1="90" y1="254" x2="102" y2="262" stroke="#E07B2A" stroke-width="4" stroke-linecap="round"/>
+    <line x1="138" y1="238" x2="146" y2="254" stroke="#E07B2A" stroke-width="5" stroke-linecap="round"/><line x1="146" y1="254" x2="134" y2="262" stroke="#E07B2A" stroke-width="4" stroke-linecap="round"/><line x1="146" y1="254" x2="144" y2="270" stroke="#E07B2A" stroke-width="4" stroke-linecap="round"/><line x1="146" y1="254" x2="158" y2="262" stroke="#E07B2A" stroke-width="4" stroke-linecap="round"/>
+    <text style="font-family:sans-serif;font-size:34px;font-weight:900;fill:#FDD835;opacity:0.65;" x="200" y="72">z</text>
+    <text style="font-family:sans-serif;font-size:24px;font-weight:900;fill:#FDD835;opacity:0.45;" x="228" y="48">z</text>
+    <text style="font-family:sans-serif;font-size:16px;font-weight:900;fill:#FDD835;opacity:0.3;" x="248" y="28">z</text>
+  </g>
+  <!-- Kev's private thought -->
   <text font-family="Patrick Hand, cursive" font-size="26" fill="white" opacity="0.55" x="56" y="390">He had never quite believed</text>
   <text font-family="Patrick Hand, cursive" font-size="26" fill="white" opacity="0.55" x="56" y="428">it could happen to him.</text>
   <text font-family="Patrick Hand, cursive" font-size="30" fill="#FDD835" opacity="0.85" x="56" y="476">…could it?</text>
