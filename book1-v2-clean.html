@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Hatch a Habit — Book 1: BELIEVE</title>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;900&family=Patrick+Hand&display=swap" rel="stylesheet">
 <style>
@@ -10,11 +10,25 @@
 
 body {
   background: #111827;
+  min-height: 100vh;
   height: 100vh;
   overflow: auto;
   display: flex;
   flex-direction: column;
   font-family: "Nunito", sans-serif;
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+  body {
+    height: auto;
+    overflow-y: auto;
+  }
+  .book {
+    height: auto;
+  }
+  .viewport {
+    height: 100vw;
+  }
 }
 
 /* TOP BAR */
