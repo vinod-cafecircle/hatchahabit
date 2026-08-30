@@ -3416,6 +3416,7 @@ body {
 
 <div class="bottombar">
   <button class="nb" id="bFirst" title="First" onclick="go(0)">&#8676;</button>
+  <button class="nb" title="Fullscreen" onclick="toggleFS()" style="font-size:16px;">⛶</button>
   <button class="nb" id="bPrev"  title="Prev"  onclick="prev()">&#8592;</button>
   <div class="prog-wrap">
     <div class="prog-track" onclick="scrub(event)">
@@ -3428,6 +3429,13 @@ body {
 </div>
 
 <script>
+function toggleFS() {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen();
+  } else {
+    document.exitFullscreen();
+  }
+}
 const TOTAL = 52;
 let cur = 0, busy = false;
 
